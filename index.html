@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Test</title>
+    <script>
+        window.addEventListener('beforeunload', function (event) {
+            console.log('beforeunload event fired');
+            alert('beforeunload');
+        });
+
+        window.addEventListener('unload', function (event) {
+            console.log('unload event fired');
+            alert('unload');
+        });
+
+        window.addEventListener('pagehide', function (event) {
+            console.log('pagehide event fired');
+            alert('pagehide');
+        });
+
+        document.addEventListener('visibilitychange', function() { console.log('visibilitychange state:', document.visibilityState); });
+
+    </script>
+</head>
+<body>
+    <h1>Close this page to trigger events</h1>
+</body>
+</html>
